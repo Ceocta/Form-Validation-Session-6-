@@ -1,0 +1,206 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #263650;
+    background-color: #eaf0f8;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #d8e2f0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(16, 42, 82, 0.10);
+}
+
+/* Welcome Text */
+.welcome {
+    margin: 0 0 8px;
+    text-align: center;
+    color: #5276a5;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* Main Heading */
+h1 {
+    margin: 0 0 10px;
+    text-align: center;
+    color: #142b4a;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin-bottom: 28px;
+    text-align: center;
+    color: #71809a;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #233a5b;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6e5;
+    border-radius: 6px;
+    background-color: #fbfcff;
+    color: #263650;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+    color: #9aa8bc;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #315b91;
+    box-shadow: 0 0 0 3px rgba(49, 91, 145, 0.12);
+    background-color: #ffffff;
+}
+
+/* Gender and Hobbies */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    color: #354967;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.option input {
+    margin: 0;
+    accent-color: #203e68;
+    cursor: pointer;
+}
+
+/* Validation Messages */
+.error {
+    display: block;
+    margin-top: 6px;
+    color: #d93045;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.invalid {
+    border: 1px solid #d93045 !important;
+    background-color: #fffafa !important;
+}
+
+.valid {
+    border: 1px solid #3b8b68 !important;
+}
+
+#genderGroup.invalid,
+#hobbiesGroup.invalid {
+    border: 1px solid #d93045;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fffafa;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 6px;
+    background-color: #203e68;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #142b4a;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+/* Reset Button */
+.reset-button {
+    margin-top: 10px;
+    border: 1px solid #cbd6e5;
+    background-color: #edf2f9;
+    color: #203e68;
+}
+
+.reset-button:hover {
+    background-color: #dce6f3;
+    color: #142b4a;
+}
+
+/* Form Feedback */
+#formMessage {
+    margin-top: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+#formMessage.success {
+    color: #23764f;
+}
+
+#formMessage.failure {
+    color: #d93045;
+}
+
+/* Responsive Layout */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 15px auto;
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
